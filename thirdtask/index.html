@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Array Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script>
+        // Helper to display results
+        function addResult(title, content) {
+            const root = document.getElementById("root");
+
+            const heading = document.createElement("h2");
+            heading.innerText = title;
+            root.appendChild(heading);
+
+            const para = document.createElement("p");
+            para.innerHTML = content;
+            root.appendChild(para);
+        }
+
+        // 1. Sort a JavaScript Array
+        const arr1 = [34, 2, 78, 1, 45];
+        const sortedArr = [...arr1].sort((a, b) => a - b); // Clone and sort
+        addResult("1. Sort JavaScript Array", `Original: [${arr1}]<br>Sorted: [${sortedArr}]`);
+
+        // 2. Concatenate two arrays
+        const arrA = ["Apple", "Banana"];
+        const arrB = ["Mango", "Peach"];
+        const mergedArray = arrA.concat(arrB);
+        addResult("2. Concatenate Two Arrays", `Array A: [${arrA}]<br>Array B: [${arrB}]<br>Merged: [${mergedArray}]`);
+
+        // 3. Remove first element from an array
+        const arr2 = ["Red", "Green", "Blue"];
+        const removed = arr2.shift(); // removes first element
+        addResult("3. Remove First Element", `Removed: ${removed}<br>Updated Array: [${arr2}]`);
+    </script>
+
+</body>
+
+</html>
